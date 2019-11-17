@@ -1,4 +1,6 @@
 // 1. swapping variables
+console.log("========== Swapping Variables ==========");
+
 let a = "red";
 let b = "green";
 
@@ -16,6 +18,7 @@ console.log(b);
 //Otherwise: Good Evening
 
 // 24 hour clock
+console.log("========== Printing Message based on time ==========");
 
 let hour = 7;
 
@@ -24,5 +27,10 @@ else if (hour >= 12 && hour < 18) console.log("Good Afternoon");
 else console.log("Good Evening");
 
 // 3. Show 5 odd number using for loops
+console.log("========== Odd Numbers Using For Loop ==========");
 
 for (let i = 1; i <= 10; i++) if (i % 2 !== 0) console.log(i);
+
+// 4. Show 5 even numbers in reverse order using for loop
+console.log("========== Even Numbers in Reverse Order ==========");
+for (let i = 10; i >= 1; i--) if (i % 2 === 0) console.log(i);
