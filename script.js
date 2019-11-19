@@ -50,9 +50,10 @@ function calcMaxNum(a, b) {
 
 // ===== 6. Is LandScape width > height=====
 
-const isLandScape = calcLandScape(100, 200);
+const isLandScape = calcLandScape(500, 200);
 console.log(isLandScape);
 
 function calcLandScape(width, height) {
-  return width > height ? "Landscape" : "potrait";
+  // return width > height ? true : false; //pour way of writing code
+  return width > height;
 }
