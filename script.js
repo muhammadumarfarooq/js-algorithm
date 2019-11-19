@@ -47,3 +47,12 @@ function calcMaxNum(a, b) {
 
   return a > b ? a : b;
 }
+
+// ===== 6. Is LandScape width > height=====
+
+const isLandScape = calcLandScape(100, 200);
+console.log(isLandScape);
+
+function calcLandScape(width, height) {
+  return width > height ? "Landscape" : "potrait";
+}
