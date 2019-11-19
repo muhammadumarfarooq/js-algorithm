@@ -49,7 +49,7 @@ function calcMaxNum(a, b) {
 }
 
 // ===== 6. Is LandScape width > height=====
-
+console.log("========== Is LandScape width > height ==========");
 const isLandScape = calcLandScape(500, 200);
 console.log(isLandScape);
 
