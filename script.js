@@ -99,3 +99,18 @@ function checkSpeed(speed) {
     ? console.log("Licence Suspended")
     : console.log("Point: " + points);
 }
+
+// ===== Even and Odd Numbers =====
+console.log("=========== Even and Odd Numbers ==========");
+
+showNumbers(10);
+
+function showNumbers(numLimit) {
+  for (let i = 0; i <= numLimit; i++) {
+    // if (i % 2 === 0) console.log(i, "Even");
+    // else console.log(i, "Odd");
+
+    const message = i % 2 === 0 ? "Even" : "Odd";
+    console.log(i, message);
+  }
+}
