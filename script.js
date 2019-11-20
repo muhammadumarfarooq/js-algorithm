@@ -57,3 +57,25 @@ function calcLandScape(width, height) {
   // return width > height ? true : false; //pour way of writing code
   return width > height;
 }
+
+// ===== 7. FizzBuzz Exercise =====
+console.log("========== FizzBuzz ==========");
+
+// Instructions:
+// Divisible by 3 => Fizz
+// Divisible by 5 => Buzz
+// Divisible by 3 and 5 => FizzBuzz
+// Not Divisible by 3 and 5 => input
+// Not a number => "not a number"
+
+//Solution:
+const outPut = fizzBuzz(30);
+console.log(outPut);
+
+function fizzBuzz(input) {
+  if (typeof input !== "number") return NaN;
+  else if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz";
+  else if (input % 3 === 0) return "Fizz";
+  else if (input % 5 === 0) return "Buzz";
+  return input;
+}
