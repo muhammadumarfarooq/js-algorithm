@@ -148,3 +148,22 @@ function checkProperty(object) {
     if (typeof object[property] === "string")
       console.log(property + ": " + object[property]);
 }
+
+// ===== Sum of Multiples of 3 and 5 =====
+console.log("=========== Sum of Multiples of 3 and 5 ==========");
+
+sum(19);
+
+function sum(limit) {
+  let totalSum = 0;
+
+  for (let i = 0; i <= limit; i++) {
+    // if (i % 3 === 0 && i % 5 === 0) totalSum += i;
+    // else if (i % 3 === 0) totalSum += i;
+    // else if (i % 5 === 0) totalSum += i;
+
+    if (i % 3 === 0 || i % 5 === 0) totalSum += i;
+  }
+
+  console.log(totalSum);
+}
