@@ -114,3 +114,20 @@ function showNumbers(numLimit) {
     console.log(i, message);
   }
 }
+
+// ===== Count Truthy and Falsy Values =====
+console.log("=========== Count Truthy and Falsy Values ==========");
+
+countTruthy([1, 2, 3, "Umar", "", null, NaN, 0, 44, 0]);
+
+function countTruthy(array) {
+  let count = 0;
+  for (let item of array) {
+    if (item) count++;
+  }
+
+  // for (let i = 0; i <= array.length; i++) {
+  //   if (array[i]) count++;
+  // }
+  console.log(count);
+}
