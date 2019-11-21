@@ -167,3 +167,25 @@ function sum(limit) {
 
   console.log(totalSum);
 }
+
+// ===== Grade =====
+console.log("=========== Grade ==========");
+
+const marks = [90, 80, 100, 100];
+console.log(calculateGrades(marks));
+
+function calculateGrades(marks) {
+  const average = calcAverage(marks);
+
+  if (average < 60) return "F";
+  if (average < 70) return "D";
+  if (average < 80) return "C";
+  if (average < 90) return "B";
+  return "A";
+}
+
+function calcAverage(array) {
+  let sumOfGrades = 0;
+  for (let value of array) sumOfGrades += value;
+  return sumOfGrades / marks.length;
+}
