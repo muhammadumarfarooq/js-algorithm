@@ -127,7 +127,7 @@ function countTruthy(array) {
   }
 
   // for (let i = 0; i <= array.length; i++) {
-  //   if (array[i]) count++;
+  //   if (array[i]) count++;89
   // }
   console.log(count);
 }
