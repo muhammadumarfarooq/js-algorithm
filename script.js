@@ -66,7 +66,7 @@ console.log("========== FizzBuzz ==========");
 // Divisible by 5 => Buzz
 // Divisible by 3 and 5 => FizzBuzz
 // Not Divisible by 3 and 5 => input
-// Not a number => "not a number"
+// Not a number => NaN
 
 //Solution:
 const outPut = fizzBuzz(30);
@@ -115,7 +115,7 @@ function showNumbers(numLimit) {
   }
 }
 
-// ===== Count Truthy and Falsy Values =====
+// ===== Count Truthy and Falsy Values (for of loop used) =====
 console.log("=========== Count Truthy and Falsy Values ==========");
 
 countTruthy([1, 2, 3, "Umar", "", null, NaN, 0, 44, 0]);
@@ -130,4 +130,21 @@ function countTruthy(array) {
   //   if (array[i]) count++;89
   // }
   console.log(count);
+}
+
+// ===== Show string properities in object (for in loop used) =====
+console.log("=========== Show string properities in object ==========");
+
+const user = {
+  name: "Umar",
+  date: 2018,
+  calc: "data"
+};
+
+checkProperty(user);
+
+function checkProperty(object) {
+  for (let property in object)
+    if (typeof object[property] === "string")
+      console.log(property + ": " + object[property]);
 }
