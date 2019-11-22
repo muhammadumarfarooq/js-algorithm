@@ -189,3 +189,16 @@ function calcAverage(array) {
   for (let value of array) sumOfGrades += value;
   return sumOfGrades / marks.length;
 }
+
+// ===== Stars =====
+console.log("=========== Stars ==========");
+
+showStars(3);
+
+function showStars(rows) {
+  for (let row = 1; row <= rows; row++) {
+    let pattern = "";
+    for (let i = 0; i < row; i++) pattern += "*";
+    console.log(pattern);
+  }
+}
