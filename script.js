@@ -202,3 +202,24 @@ function showStars(rows) {
     console.log(pattern);
   }
 }
+
+// ===== Prime Numbers =====
+console.log("=========== Prime Numbers ==========");
+// There are basically two types of numbers in mathematics
+//Prime Numbers  => divided by 1 and itself only
+//Composit Numbers  => divided by 1, itself and some other numbers.
+
+showPrimeNum(10);
+
+function showPrimeNum(limit) {
+  for (let number = 2; number <= limit; number++) {
+    let isPrime = true;
+    for (let factor = 2; factor < number; factor++) {
+      if (number % factor === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    if (isPrime) console.log(number);
+  }
+}
