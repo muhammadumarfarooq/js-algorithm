@@ -209,17 +209,34 @@ console.log("=========== Prime Numbers ==========");
 //Prime Numbers  => divided by 1 and itself only
 //Composit Numbers  => divided by 1, itself and some other numbers.
 
-showPrimeNum(10);
+showPrimeNum(20);
+
+// function showPrimeNum(limit) {
+//   for (let number = 2; number <= limit; number++) {
+//     calcPrime(number);
+//   }
+// }
 
 function showPrimeNum(limit) {
-  for (let number = 2; number <= limit; number++) {
-    let isPrime = true;
-    for (let factor = 2; factor < number; factor++) {
-      if (number % factor === 0) {
-        isPrime = false;
-        break;
-      }
-    }
-    if (isPrime) console.log(number);
-  }
+  for (let number = 2; number <= limit; number++)
+    if (isPrime(number)) console.log(number);
+}
+
+//Prime Number with Single Responsibility Function
+
+// function calcPrime(number) {
+//   let isPrime = true;
+//   for (let factor = 2; factor < number; factor++) {
+//     if (number % factor === 0) {
+//       isPrime = false;
+//       break;
+//     }
+//   }
+//   if (isPrime) console.log(number);
+// }
+
+function isPrime(number) {
+  for (let factor = 2; factor < number; factor++)
+    if (number % factor === 0) return false;
+  return true;
 }
