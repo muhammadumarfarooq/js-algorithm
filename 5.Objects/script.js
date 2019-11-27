@@ -31,23 +31,6 @@
 
 // circle2.draw(); //Method
 
-// Facroty Function
-
-// function calcCircle(radius, location) {
-//   return {
-//     radius,
-//     location,
-//     draw() {
-//       console.log("CIRCLE");
-//     }
-//   };
-// }
-
-// const circle1 = calcCircle(1, { x: 1, y: 2 });
-// console.log(circle1);
-// const circle2 = calcCircle(2, { x: 100, y: 102 });
-// console.log(circle2);
-
 // Factory Function
 
 // function calcCircle(radius) {
@@ -67,16 +50,51 @@
 
 // Constructor Function
 
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function() {
+//     console.log("Hello World!");
+//   };
+// }
+
+// const circle1 = new Circle(1);
+// console.log(circle1);
+
+// const circle77 = new Circle(77);
+
+// console.log(circle77);
+
+// constructor Function
+
 function Circle(radius) {
   this.radius = radius;
   this.draw = function() {
-    console.log("Hello World!");
+    console.log("hello world");
   };
 }
 
-const circle1 = new Circle(1);
-console.log(circle1);
+const circle1 = new Circle(12);
+// console.log(circle1);
 
-const circle77 = new Circle(77);
+// const circle2 = new Circle(2);
+// console.log(circle2);
 
-console.log(circle77);
+// Primitives VS Data Types
+
+// Primitives are copied by value.
+// Objects are copied by reference.
+
+// Primitives
+// let x = 5;
+// let y = x;
+// x = 15;
+
+// Objects => Reference Type
+let x = { value: 5 };
+let y = x;
+
+y.value = 1000;
+x.value = 99;
+
+console.log("x", x);
+console.log("y", y);
