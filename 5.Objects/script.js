@@ -66,14 +66,14 @@
 
 // constructor Function
 
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function() {
-    console.log("hello world");
-  };
-}
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function() {
+//     console.log("hello world");
+//   };
+// }
 
-const circle1 = new Circle(12);
+// const circle1 = new Circle(12);
 // console.log(circle1);
 
 // const circle2 = new Circle(2);
@@ -90,11 +90,37 @@ const circle1 = new Circle(12);
 // x = 15;
 
 // Objects => Reference Type
-let x = { value: 5 };
-let y = x;
+// let x = { value: 5 };
+// let y = x;
 
-y.value = 1000;
-x.value = 99;
+// y.value = 1000;
+// x.value = 99;
 
-console.log("x", x);
-console.log("y", y);
+// console.log("x", x);
+// console.log("y", y);
+
+// Cloning an object
+
+const student1 = {
+  name: "Umar",
+  location: "pakistan"
+};
+
+console.log("Student1:", student1);
+
+// const student2 = { address: "Mohallah Azam abad street # 2" };
+
+// 1
+
+// for (let key in student1) {
+//   student2[key] = student1[key];
+// }
+
+// 2
+
+// Object.assign(student2, student1);
+
+// 3 Spread Operator
+const student2 = { address: "Mohallah Azam abad street # 2", ...student1 };
+
+console.log("student2:", student2);
