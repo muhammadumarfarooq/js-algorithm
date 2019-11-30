@@ -143,13 +143,13 @@ const student1 = {
 // addresss object using factory and constructor function
 
 // Factory
-function address(street, city, zipCode) {
-  return {
-    street,
-    city,
-    zipCode
-  };
-}
+// function address(street, city, zipCode) {
+//   return {
+//     street,
+//     city,
+//     zipCode
+//   };
+// }
 
 // const umarAddress = address("a", "b", "c");
 
@@ -160,6 +160,32 @@ function Address(street, city, zipCode) {
   this.zipCode = zipCode;
 }
 
-const umarAddress = new Address("a", "b", "c");
+const address1 = new Address("a", "b", "c");
+const address2 = new Address("a", "b", "c");
+const address3 = address2;
+// function areEqual(address1, address2) {
+//   let isEqual = true;
+//   for (let key in address1) {
+//     if (address1[key] !== address2[key]) {
+//       isEqual = false;
+//       return isEqual;
+//     }
+//   }
 
-console.log(umarAddress);
+//   return isEqual;
+// }
+
+function areEqual(address1, address2) {
+  return (
+    address1.street === address2.street &&
+    address1.city === address2.city &&
+    address1.zipCode === address2.zipCode
+  );
+}
+
+function areSame(address1, address2) {
+  return address1 === address2;
+}
+
+console.log("Equal:", areEqual(address1, address2));
+console.log("Same:", areSame(address1, address2));
