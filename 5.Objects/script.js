@@ -128,14 +128,38 @@ const student1 = {
 
 // Exercise # 1
 
-const address = {
-  street: "Azam abad",
-  city: "Faisalabad",
-  zipCode: 38000
-};
+// const address = {
+//   street: "Azam abad",
+//   city: "Faisalabad",
+//   zipCode: 38000
+// };
 
-showAddress(address);
+// showAddress(address);
+// function showAddress(address) {
+//   for (let key in address) console.log(`${key}: ${address[key]}`);
+// }
 
-function showAddress(address) {
-  for (let key in address) console.log(`${key}: ${address[key]}`);
+// Exercise # 2
+// addresss object using factory and constructor function
+
+// Factory
+function address(street, city, zipCode) {
+  return {
+    street,
+    city,
+    zipCode
+  };
 }
+
+// const umarAddress = address("a", "b", "c");
+
+// Constructor
+function Address(street, city, zipCode) {
+  this.street = street;
+  this.city = city;
+  this.zipCode = zipCode;
+}
+
+const umarAddress = new Address("a", "b", "c");
+
+console.log(umarAddress);
