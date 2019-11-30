@@ -106,7 +106,7 @@ const student1 = {
   location: "pakistan"
 };
 
-console.log("Student1:", student1);
+// console.log("Student1:", student1);
 
 // const student2 = { address: "Mohallah Azam abad street # 2" };
 
@@ -117,10 +117,25 @@ console.log("Student1:", student1);
 // }
 
 // 2
-
 // Object.assign(student2, student1);
 
 // 3 Spread Operator
-const student2 = { address: "Mohallah Azam abad street # 2", ...student1 };
+// const student2 = { address: "Mohallah Azam abad street # 2", ...student1 };
 
-console.log("student2:", student2);
+// console.log("student2:", student2);
+
+// Object Exercises:
+
+// Exercise # 1
+
+const address = {
+  street: "Azam abad",
+  city: "Faisalabad",
+  zipCode: 38000
+};
+
+showAddress(address);
+
+function showAddress(address) {
+  for (let key in address) console.log(`${key}: ${address[key]}`);
+}
