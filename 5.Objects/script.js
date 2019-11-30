@@ -192,17 +192,51 @@ const address3 = address2;
 
 // Blog Post Objects
 
-const cook = {
-  title: "How to Cook",
-  body:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis temporibus vitae veniam nobis enim? Sequi reprehenderit facere dignissimos deserunt atque.",
-  author: "Umar Farooq",
-  views: 956,
-  comments: [
-    { body: "This is one comment", author: "Zain" },
-    { body: "This is two comment", author: "Haji Nawab" }
-  ],
-  isLive: true
-};
+// const cook = {
+//   title: "How to Cook",
+//   body:
+//     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis temporibus vitae veniam nobis enim? Sequi reprehenderit facere dignissimos deserunt atque.",
+//   author: "Umar Farooq",
+//   views: 956,
+//   comments: [
+//     { body: "This is one comment", author: "Zain" },
+//     { body: "This is two comment", author: "Haji Nawab" }
+//   ],
+//   isLive: true
+// };
 
-console.log(cook);
+// console.log(cook);
+
+// Blog Post Constructor Function
+
+// function Post(title, body, author, views, comments, isLive) {
+//   this.title = title;
+//   this.body = body;
+//   this.author = author;
+//   this.views = views;
+//   this.comments = comments;
+//   this.isLive = isLive;
+// }
+
+// const post1 = new Post(
+//   "umar",
+//   "body some",
+//   "um",
+//   7895,
+//   [{ name: "a" }, { name: "b" }],
+//   "dfgb dfjkla",
+//   false
+// );
+
+function Post(title, body, author) {
+  this.title = title;
+  this.body = body;
+  this.author = author;
+  this.views = 0;
+  this.comments = [];
+  this.isLive = false;
+}
+
+const post1 = new Post("umar", "body some", "um");
+
+console.log(post1);
