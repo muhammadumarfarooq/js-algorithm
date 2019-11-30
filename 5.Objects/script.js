@@ -228,15 +228,22 @@ const address3 = address2;
 //   false
 // );
 
-function Post(title, body, author) {
-  this.title = title;
-  this.body = body;
-  this.author = author;
-  this.views = 0;
-  this.comments = [];
-  this.isLive = false;
-}
+// function Post(title, body, author) {
+//   this.title = title;
+//   this.body = body;
+//   this.author = author;
+//   this.views = 0;
+//   this.comments = [];
+//   this.isLive = false;
+// }
 
-const post1 = new Post("umar", "body some", "um");
+// const post1 = new Post("umar", "body some", "um");
 
-console.log(post1);
+// console.log(post1);
+
+// Price Range
+const priveRanges = [
+  { label: "$", toolTip: "Inexpensive", minPerPerson: 0, maxPerPerson: 10 },
+  { label: "$$", toolTip: "Moderate", minPerPerson: 11, maxPerPerson: 20 },
+  { label: "$$$", toolTip: "Expensive", minPerPerson: 21, maxPerPerson: 50 }
+];
