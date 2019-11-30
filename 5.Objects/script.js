@@ -175,17 +175,34 @@ const address3 = address2;
 //   return isEqual;
 // }
 
-function areEqual(address1, address2) {
-  return (
-    address1.street === address2.street &&
-    address1.city === address2.city &&
-    address1.zipCode === address2.zipCode
-  );
-}
+// function areEqual(address1, address2) {
+//   return (
+//     address1.street === address2.street &&
+//     address1.city === address2.city &&
+//     address1.zipCode === address2.zipCode
+//   );
+// }
 
-function areSame(address1, address2) {
-  return address1 === address2;
-}
+// function areSame(address1, address2) {
+//   return address1 === address2;
+// }
 
-console.log("Equal:", areEqual(address1, address2));
-console.log("Same:", areSame(address1, address2));
+// console.log("Equal:", areEqual(address1, address2));
+// console.log("Same:", areSame(address1, address2));
+
+// Blog Post Objects
+
+const cook = {
+  title: "How to Cook",
+  body:
+    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis temporibus vitae veniam nobis enim? Sequi reprehenderit facere dignissimos deserunt atque.",
+  author: "Umar Farooq",
+  views: 956,
+  comments: [
+    { body: "This is one comment", author: "Zain" },
+    { body: "This is two comment", author: "Haji Nawab" }
+  ],
+  isLive: true
+};
+
+console.log(cook);
