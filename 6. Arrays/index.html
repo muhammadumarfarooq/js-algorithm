@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS coding Exercises</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        /* background: brown; */
+        background: radial-gradient(
+          circle,
+          rgba(63, 94, 251, 1) 0%,
+          rgba(252, 70, 107, 1) 100%
+        );
+
+        text-align: center;
+        padding: 1rem;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      ul {
+        /* margin-left: 2rem; */
+        list-style: none;
+      }
+      .exercises li {
+        padding: 1rem;
+        color: #333;
+        font-weight: 600;
+      }
+      .exercises li:nth-child(odd) {
+        background: #ccc;
+      }
+      .exercises li:nth-child(even) {
+        background: #aaa;
+      }
+
+      .topics {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #333;
+        font-weight: 800;
+      }
+      .topics li {
+        padding: 1rem;
+      }
+      .topics li:nth-child(odd) {
+        background: rgba(255, 102, 0, 0.322);
+      }
+      .topics li:nth-child(even) {
+        background: rgba(0, 47, 255, 0.363);
+      }
+      h2 {
+        padding: 1.5rem;
+        background: teal;
+        color: #fff;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JS Coding Exercises (Basics)</h1>
+    <div class="opacity">
+      <h2>Topics Covered:</h2>
+      <ul class="topics">
+        <li>Arrays</li>
+      </ul>
+      <h2>Exercises:</h2>
+      <ul class="exercises"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
