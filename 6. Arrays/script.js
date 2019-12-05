@@ -39,6 +39,8 @@ console.log(newArr);
 
 // Slicing Array
 
-const slicedArr = newArr.slice(1, 3);
+let slicedArr = newArr.slice(1, 3);
+slicedArr = newArr.slice(3); //start from index 3 and slice till end
+slicedArr = newArr.slice(); //copy whole array
 
 console.log(slicedArr);
