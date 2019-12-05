@@ -27,4 +27,12 @@ const courses = [
 
 const found = courses.find(course => course.name === "a");
 
-console.log(found);
+// console.log(found);
+
+// Combining Arrays:
+
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5];
+
+const newArr = arr1.concat(arr2);
+console.log(newArr);
