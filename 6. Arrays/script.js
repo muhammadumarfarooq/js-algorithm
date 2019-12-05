@@ -44,3 +44,9 @@ slicedArr = newArr.slice(3); //start from index 3 and slice till end
 slicedArr = newArr.slice(); //copy whole array
 
 console.log(slicedArr);
+
+// Spread operator  (another easy and flexible way of copy and concating an array)
+const combine = [...arr1, ...arr2];
+const copy = [...combine, "dsfads"];
+
+console.log(copy);
