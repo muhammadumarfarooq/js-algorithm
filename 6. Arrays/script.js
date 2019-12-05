@@ -36,3 +36,9 @@ const arr2 = [4, 5];
 
 const newArr = arr1.concat(arr2);
 console.log(newArr);
+
+// Slicing Array
+
+const slicedArr = newArr.slice(1, 3);
+
+console.log(slicedArr);
