@@ -49,4 +49,14 @@ console.log(slicedArr);
 const combine = [...arr1, ...arr2];
 const copy = [...combine, "dsfads"];
 
-console.log(copy);
+// console.log(copy);
+
+// Iterating over an array => use for-of loop
+
+const names = ["Umar", "Hassan", "Umair"];
+
+// for (let name of names) {
+//   console.log(item);
+// }
+
+// names.forEach((name, index) => console.log(index, name));
