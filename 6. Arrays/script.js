@@ -60,3 +60,16 @@ const names = ["Umar", "Hassan", "Umair"];
 // }
 
 // names.forEach((name, index) => console.log(index, name));
+
+// Joining an Array
+
+const name = "Muhammad Umar Farooq";
+const splitArr = name.split(" ");
+const joinStr = splitArr.join("-");
+// const info = ["Umar", "malik", 21, 91];
+
+// const joined = info.join(" - ");
+
+// console.log(info);
+// console.log(joined);
+console.log(joinStr);
