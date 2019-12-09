@@ -1,3 +1,5 @@
+// Topics: adding, removing, finding, emptying, combining , slicing, iteration, Joining an array
+
 //Adding Elements
 
 const colors = ["red", "green", "blue"];
@@ -66,10 +68,12 @@ const names = ["Umar", "Hassan", "Umair"];
 const name = "Muhammad Umar Farooq";
 const splitArr = name.split(" ");
 const joinStr = splitArr.join("-");
+
 // const info = ["Umar", "malik", 21, 91];
 
 // const joined = info.join(" - ");
 
 // console.log(info);
 // console.log(joined);
-console.log(joinStr);
+
+// console.log(joinStr);
