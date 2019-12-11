@@ -99,3 +99,16 @@ persons.sort((a, b) => {
 });
 
 console.log(persons);
+
+// Testing the elements of an array
+
+// .every ==> all have to fullfill condition
+// .some ==> find atleast one
+
+const numbersA = [-1, 1, -2, -3, -4, -5];
+
+const atLeastOnePositive = numbersA.every(function(value) {
+  return value >= 0;
+});
+
+console.log(atLeastOnePositive);
