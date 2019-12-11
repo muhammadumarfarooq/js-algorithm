@@ -111,4 +111,12 @@ const atLeastOnePositive = numbersA.every(function(value) {
   return value >= 0;
 });
 
-console.log(atLeastOnePositive);
+// console.log(atLeastOnePositive);
+
+// Filtering Array
+
+const numberB = [1, 2, 3, -1, -3, 5];
+
+const positiveNumbers = numberB.filter(value => value >= 0);
+
+console.log(positiveNumbers);
