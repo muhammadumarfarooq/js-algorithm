@@ -77,3 +77,25 @@ const joinStr = splitArr.join("-");
 // console.log(joined);
 
 // console.log(joinStr);
+
+// Sorting Array
+const myNum = [2, 3, 1];
+
+myNum.sort();
+myNum.reverse();
+
+console.log(myNum);
+
+const persons = [
+  { id: 1, name: "zinger" },
+  { id: 2, name: "pista" },
+  { id: 2, name: "aista" }
+];
+
+persons.sort((a, b) => {
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0;
+});
+
+console.log(persons);
