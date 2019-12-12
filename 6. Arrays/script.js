@@ -37,7 +37,7 @@ const arr1 = [1, 2, 3];
 const arr2 = [4, 5];
 
 const newArr = arr1.concat(arr2);
-console.log(newArr);
+// console.log(newArr);
 
 // Slicing Array
 
@@ -45,7 +45,7 @@ let slicedArr = newArr.slice(1, 3);
 slicedArr = newArr.slice(3); //start from index 3 and slice till end
 slicedArr = newArr.slice(); //copy whole array
 
-console.log(slicedArr);
+// console.log(slicedArr);
 
 // Spread operator  (another easy and flexible way of copy and concating an array)
 const combine = [...arr1, ...arr2];
@@ -84,7 +84,7 @@ const myNum = [2, 3, 1];
 myNum.sort();
 myNum.reverse();
 
-console.log(myNum);
+// console.log(myNum);
 
 const persons = [
   { id: 1, name: "zinger" },
@@ -98,7 +98,7 @@ persons.sort((a, b) => {
   return 0;
 });
 
-console.log(persons);
+// console.log(persons);
 
 // Testing the elements of an array
 
@@ -113,10 +113,19 @@ const atLeastOnePositive = numbersA.every(function(value) {
 
 // console.log(atLeastOnePositive);
 
-// Filtering Array
+// Mapping over an array
 
-const numberB = [1, 2, 3, -1, -3, 5];
+const numbersB = [-1, 1, -2, -3, -4, -5];
 
-const positiveNumbers = numberB.filter(value => value >= 0);
+const items = numbersB
+  .filter(value => value <= 0)
+  .map(value => ({
+    number: value
+  }));
 
-console.log(positiveNumbers);
+// const items = filtered.map(value => "<li>" + value + "</li>");
+// const html = "<ul>" + items.join("") + "</ul>";
+
+// console.log(filtered);
+console.log(items);
+// console.log(html);
