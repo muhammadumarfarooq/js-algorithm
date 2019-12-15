@@ -173,14 +173,17 @@
 
 const numbers = [1, 2, 3, 4, 5];
 
-const output = move(numbers, 3, 1);
+const output = move(numbers, 1, -1);
 
 function move(array, index, offset) {
-  const output = [...array];
-  const deletedItem = output.splice(index, 1);
-  if (index + offset < 0 || index + offset > output.length)
-    return console.error("Invalid Program");
+  const position = index + offset;
+  if (position < 0 || position > array.length) {
+    console.error("Invalid Offset");
+    return;
+  }
 
-  output.splice(index + offset, 0, deletedItem[0]);
+  const output = [...array];
+  const deletedItem = output.splice(index, 1)[0];
+  output.splice(index + offset, 0, deletedItem);
   console.log(output);
 }
