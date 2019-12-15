@@ -143,13 +143,28 @@
 //   return numberArray;
 // }
 
-// Includes method on myself
+//========= Includes method on myself ==========
 
-const numbers = [1, 2, 3, 4, 0];
+// const numbers = [1, 2, 3, 4, 0];
 
-console.log(includes(numbers, 30));
+// console.log(includes(numbers, 30));
 
 function includes(array, searchElement) {
   for (let element of array) if (element === searchElement) return true;
   return false;
+}
+
+// ========= Execpt ========
+
+const numbers = [1, 2, 3, 4, 1, 7, 87];
+
+const output = except(numbers, [1, 87]);
+console.log(output);
+
+function except(numbers, exceptArray) {
+  const output = [];
+  for (let number of numbers)
+    if (!includes(exceptArray, number)) output.push(number);
+
+  return output;
 }
