@@ -210,16 +210,34 @@
 //   return counter;
 // }
 
-// Array sum
+// with for of loop
 
-const numbers = [1, 2, -1, 3, 5];
-const initialValue = 100;
+const numbers = [1, 2, 1, 3, 4, 5, 2];
+const count = countOccurances(numbers, 1);
+console.log(count);
 
-const sum = numbers.reduce((accumulator, currentValue) => {
-  return accumulator + currentValue;
-}, initialValue);
+function countOccurances(array, number) {
+  let counter = 0;
+  // with for-of loop
+  // for (let element of array) if (element === number) counter++;
+  // with reduce method
+  return array.reduce((accumulator, currentValue) => {
+    if (currentValue === number) return accumulator + 1;
+    return accumulator + 0;
+  }, 0);
+}
 
+//========= Array sum =========
+// const numbers = [1, 2, -1, 3, 5];
+// const initialValue = 100;
+
+// with reduce method
+// const sum = numbers.reduce((accumulator, currentValue) => {
+//   return accumulator + currentValue;
+// }, initialValue);
+
+// with for-of loop
 // let sum = 0;
 // for (let number of numbers) sum += number;
 
-console.log(sum);
+// console.log(sum);
