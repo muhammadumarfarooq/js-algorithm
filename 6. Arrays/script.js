@@ -133,12 +133,23 @@
 // Exercises
 //========== Array From Range ==========
 
-const numbers = arrayFromRange(-10, -40);
+// const numbers = arrayFromRange(-10, -40);
 
-console.log(numbers);
+// console.log(numbers);
 
-function arrayFromRange(min, max) {
-  const numberArray = [];
-  for (let i = min; i <= max; i++) numberArray.push(i);
-  return numberArray;
+// function arrayFromRange(min, max) {
+//   const numberArray = [];
+//   for (let i = min; i <= max; i++) numberArray.push(i);
+//   return numberArray;
+// }
+
+// Includes method on myself
+
+const numbers = [1, 2, 3, 4, 0];
+
+console.log(includes(numbers, 30));
+
+function includes(array, searchElement) {
+  for (let element of array) if (element === searchElement) return true;
+  return false;
 }
