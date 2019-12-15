@@ -130,6 +130,15 @@
 // // console.log(items);
 // // console.log(html);
 
+// Reducing an Array
+
+// const numbers = [1, 2, -1, 3, 5];
+// const initialValue = 100;
+
+// const sum = numbers.reduce((accumulator, currentValue) => {
+//   return accumulator + currentValue;
+// }, initialValue);
+
 // Exercises
 //========== Array From Range ==========
 
@@ -171,19 +180,46 @@
 
 // ======== Moving an Element ========
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
-const output = move(numbers, 1, -1);
+// const output = move(numbers, 1, -1);
 
-function move(array, index, offset) {
-  const position = index + offset;
-  if (position < 0 || position > array.length) {
-    console.error("Invalid Offset");
-    return;
-  }
+// function move(array, index, offset) {
+//   const position = index + offset;
+//   if (position < 0 || position > array.length) {
+//     console.error("Invalid Offset");
+//     return;
+//   }
 
-  const output = [...array];
-  const deletedItem = output.splice(index, 1)[0];
-  output.splice(index + offset, 0, deletedItem);
-  console.log(output);
-}
+//   const output = [...array];
+//   const deletedItem = output.splice(index, 1)[0];
+//   output.splice(index + offset, 0, deletedItem);
+//   console.log(output);
+// }
+
+//========= Count Occurances =========
+
+// const numbers = [1, 2, 1, 1, 3, 4, 5, 2];
+
+// const count = countOccurances(numbers, 15);
+// console.log(count);
+
+// function countOccurances(array, number) {
+//   let counter = 0;
+//   for (let element of array) if (element === number) counter++;
+//   return counter;
+// }
+
+// Array sum
+
+const numbers = [1, 2, -1, 3, 5];
+const initialValue = 100;
+
+const sum = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, initialValue);
+
+// let sum = 0;
+// for (let number of numbers) sum += number;
+
+console.log(sum);
