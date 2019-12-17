@@ -244,18 +244,31 @@
 
 // ========== Get Max Number =========
 
-const numbers = [0.01, 0.02];
+// const numbers = [0.01, 0.02];
+
+// const maxNumber = getMax(numbers);
+
+// console.log(maxNumber);
+
+// function getMax(array) {
+//   if (array.length === 0) return undefined;
+
+//   let maxNum = array[0];
+//   for (let i = 1; i < array.length; i++)
+//     if (array[i] > maxNum) maxNum = array[i];
+
+//   return maxNum;
+// }
+
+// Get max using reduce method
+
+const numbers = [1, 2, 12, 26, 1, 2, 88];
 
 const maxNumber = getMax(numbers);
 
 console.log(maxNumber);
 
 function getMax(array) {
-  if (array.length === 0) return undefined;
-
-  let maxNum = array[0];
-  for (let i = 1; i < array.length; i++)
-    if (array[i] > maxNum) maxNum = array[i];
-
-  return maxNum;
+  if ((array.length = 0)) return undefined;
+  return array.reduce((a, c) => (a > c ? a : c));
 }
