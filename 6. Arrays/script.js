@@ -212,20 +212,20 @@
 
 // with for of loop
 
-const numbers = [1, 2, 1, 3, 4, 5, 2];
-const count = countOccurances(numbers, 1);
-console.log(count);
+// const numbers = [1, 2, 1, 3, 4, 5, 2];
+// const count = countOccurances(numbers, 1);
+// console.log(count);
 
-function countOccurances(array, number) {
-  let counter = 0;
-  // with for-of loop
-  // for (let element of array) if (element === number) counter++;
-  // with reduce method
-  return array.reduce((accumulator, currentValue) => {
-    if (currentValue === number) return accumulator + 1;
-    return accumulator + 0;
-  }, 0);
-}
+// function countOccurances(array, number) {
+//   let counter = 0;
+//   // with for-of loop
+//   // for (let element of array) if (element === number) counter++;
+//   // with reduce method
+//   return array.reduce((accumulator, currentValue) => {
+//     if (currentValue === number) return accumulator + 1;
+//     return accumulator + 0;
+//   }, 0);
+// }
 
 //========= Array sum =========
 // const numbers = [1, 2, -1, 3, 5];
@@ -241,3 +241,21 @@ function countOccurances(array, number) {
 // for (let number of numbers) sum += number;
 
 // console.log(sum);
+
+// ========== Get Max Number =========
+
+const numbers = [0.01, 0.02];
+
+const maxNumber = getMax(numbers);
+
+console.log(maxNumber);
+
+function getMax(array) {
+  if (array.length === 0) return undefined;
+
+  let maxNum = array[0];
+  for (let i = 1; i < array.length; i++)
+    if (array[i] > maxNum) maxNum = array[i];
+
+  return maxNum;
+}
