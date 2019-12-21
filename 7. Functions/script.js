@@ -18,8 +18,25 @@ but if we want to get the sum of all the arguments that we pass we can use argum
 // Using argument object in js
 
 function sum(xon, sd, ...args) {
-  n;
   return args.reduce((accumulator, current) => accumulator + current);
 }
 
 console.log(sum(225, 123, 1, 2, 3, 22));
+
+// Getters and Setters
+
+const person = {
+  firstName: "Umar",
+  lastName: "Farooq",
+  get fullName() {
+    return `${person.firstName} ${person.lastName}`;
+  },
+  set fullName(name) {
+    const nameArr = name.split(" ");
+    this.firstName = nameArr[0];
+    this.lastName = nameArr[nameArr.length - 1];
+  }
+};
+
+person.fullName = "Muhammad Umar Farooq";
+console.log(person.fullName);
