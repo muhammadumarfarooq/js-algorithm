@@ -40,3 +40,28 @@ const person = {
 
 person.fullName = "Muhammad Umar Farooq";
 console.log(person.fullName);
+
+//Try...Catch
+// Defensive Programming
+
+const person = {
+  firstName: "Umar",
+  lastName: "Malik",
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  set fullName(name) {
+    if (typeof name !== "string") throw new Error("Enter a valid String");
+    const nameArr = name.split(" ");
+    if (nameArr.length < 2) throw new Error("Enter First and the last name");
+    this.firstName = nameArr[0];
+    this.lastName = nameArr[1];
+  }
+};
+
+try {
+  person.fullName = "Umar Malik";
+  console.log(person.fullName);
+} catch (error) {
+  console.error(error);
+}
