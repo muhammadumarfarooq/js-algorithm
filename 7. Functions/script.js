@@ -65,3 +65,12 @@ console.log(sum(225, 123, 1, 2, 3, 22));
 // } catch (error) {
 //   console.error(error);
 // }
+
+// Local Vs Global Scope
+
+let name1111 = "Malik";
+
+if (true) {
+  name1111 = "Umar";
+}
+console.log(name1111);
