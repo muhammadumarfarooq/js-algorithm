@@ -68,9 +68,36 @@ console.log(sum(225, 123, 1, 2, 3, 22));
 
 // Local Vs Global Scope
 
-let name1111 = "Malik";
+// let name1111 = "Malik";
 
-if (true) {
-  name1111 = "Umar";
-}
-console.log(name1111);
+// if (true) {
+//   name1111 = "Umar";
+// }
+// console.log(name1111);
+
+// Let Vs Var
+
+// ====== The this keyword =======
+
+const name = {
+  name: "Umar",
+  tags: ["a", "b", "c"],
+  showName() {
+    this.tags.forEach(function(tag) {
+      console.log(this.name, tag);
+    }, this);
+  }
+};
+
+// name.calc = function() {
+//   console.log(this);
+// };
+
+// function calcSome() {
+//   console.log(this);
+// }
+
+// name.calc();
+
+// calcSome();
+name.showName();
