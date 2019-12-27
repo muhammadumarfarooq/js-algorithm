@@ -79,15 +79,15 @@ console.log(sum(225, 123, 1, 2, 3, 22));
 
 // ====== The this keyword =======
 
-const name = {
-  name: "Umar",
-  tags: ["a", "b", "c"],
-  showName() {
-    this.tags.forEach(function(tag) {
-      console.log(this.name, tag);
-    }, this);
-  }
-};
+// const name = {
+//   name: "Umar",
+//   tags: ["a", "b", "c"],
+//   showName() {
+//     this.tags.forEach(function(tag) {
+//       console.log(this.name, tag);
+//     }, this);
+//   }
+// };
 
 // name.calc = function() {
 //   console.log(this);
@@ -100,4 +100,15 @@ const name = {
 // name.calc();
 
 // calcSome();
-name.showName();
+// name.showName();
+
+// Exercise: Sum of Arguments
+
+function Sum(...args) {
+  if (args.length === 1 && Array.isArray(args[0]))
+    return args[0].reduce((accumulator, current) => accumulator + current);
+
+  return args.reduce((accumulator, current) => accumulator + current);
+}
+
+console.log(Sum([1, 2, 3, 3, 10, 1, 1, 23]));
